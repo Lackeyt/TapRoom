@@ -6,14 +6,7 @@ function KegDetail(props){
 
   function handlePintRemove(event){
     event.preventDefault();
-    const newName = keg.name
-    const newBrand = keg.brand
-    const newPrice = keg.price
-    const newABV = keg.alcoholContent
-    const newPints = keg.pintsRemaining - 1
-    const newId = keg.id
-
-    props.onClickingPintRemove({name: newName, brand: newBrand, price: newPrice, alcoholContent: newABV, pintsRemaining: newPints , id: newId})
+    props.onClickingPintRemove({name: keg.name, brand: keg.brand, price: keg.price, alcoholContent: keg.alcoholContent, pintsRemaining: keg.pintsRemaining - 1 , id: keg.id})
   }
 
   return(

@@ -53,6 +53,7 @@ class KegControl extends React.Component {
       .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
+      selectedKeg: null
     })
   }
 
