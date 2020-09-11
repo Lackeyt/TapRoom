@@ -53,7 +53,6 @@ class KegControl extends React.Component {
       .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
-      editing: false,
     })
   }
 
@@ -62,7 +61,7 @@ class KegControl extends React.Component {
     let buttonText = null;
 
     if(this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDelete = {this.handleDeletingKeg} onClickingEdit = {this.handleEditClick} onClickingPintRemove = {this.handlePintRemove} />
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDelete = {this.handleDeletingKeg} onClickingPintRemove = {this.handlePintRemove} />
       buttonText = "Return to Keg List";
     }
     else if(this.state.formVisibleOnPage){
