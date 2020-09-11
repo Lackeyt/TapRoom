@@ -7,19 +7,19 @@ function ReusableForm(props){
       <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
-          name='names'
+          name='name'
           placeholder='Keg Name' />
         <input
           type='text'
-          name='Brand'
+          name='brand'
           placeholder='Keg Brand' />
         <input
           type='text'
-          name='Price'
+          name='price'
           placeholder='$0.00' />
           <input
           type='text'
-          name='AlcoholContent'
+          name='alcoholContent'
           placeholder='00.00%' />
         <button type='submit'>{props.buttonText}</button>
       </form>
