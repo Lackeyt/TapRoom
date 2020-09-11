@@ -2,7 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm';
 import KegList from './KegList';
 import KegDetail from './KegDetail';
-import EditKegForm from './EditKegForm';
+import EditKegForm from './editKegForm';
 
 class KegControl extends React.Component {
   constructor(props){
@@ -82,12 +82,12 @@ class KegControl extends React.Component {
       buttonText = "Return to Keg List";
     }
     else{
-      currentlyVisbleState = <KegList kegList = {this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />
+      currentlyVisibleState = <KegList kegList = {this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />
       buttonText = "Add Keg"
     }
     return (
       <React.Fragment>
-        {currentlyVisbleState}
+        {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
