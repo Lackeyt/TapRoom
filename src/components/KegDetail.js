@@ -5,11 +5,9 @@ function KegDetail(props){
   const {keg, onClickingDelete} = props;
 
   function handlePintRemove(){
-    if(keg.pintsRemaining == 0){
-      props.onClickingPintRemove({name: keg.name, brand: keg.brand, price: keg.price, alcoholContent: keg.alcoholContent, pintsRemaining: keg.pintsRemaining , id: keg.id})
-    } else {
-      props.onClickingPintRemove({name: keg.name, brand: keg.brand, price: keg.price, alcoholContent: keg.alcoholContent, pintsRemaining: keg.pintsRemaining - 1 , id: keg.id})
-    }
+    if(keg.pintsRemaining > 0){
+      props.onClickingPintRemove(keg.pintsRemaining--)
+    } 
   }
 
   return(

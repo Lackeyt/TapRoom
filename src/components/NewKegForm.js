@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function NewKegForm(props){
   function handleNewKegFormSubmission(event){
     event.preventDefault();
-    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, pintsRemaining: event.target.pintsRemaining.value, id: v4()});
+    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, pintsRemaining: 124, id: v4()});
   }
 
   return (
@@ -27,10 +27,6 @@ function NewKegForm(props){
           type='text'
           name='alcoholContent'
           placeholder='00.00%' />
-          <input
-          type='hidden'
-          name='pintsRemaining'
-          value='124' />
         <button type='submit'>Create</button>
       </form>
     </React.Fragment>
