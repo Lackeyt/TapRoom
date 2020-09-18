@@ -48,14 +48,15 @@ class KegControl extends React.Component {
   }
 
   handlePintRemove = (kegToEdit) => {
-    const editedKeg = {name: kegToEdit.name, brand: kegToEdit.brand, price: kegToEdit.price, alcoholContent: kegToEdit.alcoholContent, pintsRemaining: kegToEdit.pintsRemaining-- , id: kegToEdit.id}
+    //const editedKeg = {name: kegToEdit.name, brand: kegToEdit.brand, price: kegToEdit.price, alcoholContent: kegToEdit.alcoholContent, pintsRemaining: kegToEdit.pintsRemaining-- , id: kegToEdit.id}
     const editedMasterKegList = this.state.masterKegList
       .filter(keg=>keg.id !== this.state.selectedKeg.id)
-      .concat(editedKeg);
+      .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
       selectedKeg: null
     });
+  }
 
   render(){
     let currentlyVisibleState = null;

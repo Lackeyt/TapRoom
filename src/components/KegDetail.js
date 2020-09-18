@@ -6,7 +6,7 @@ function KegDetail(props){
 
   function handlePintRemove(){
     if(keg.pintsRemaining > 0 ){
-      props.onClickingPintRemove(keg)
+      props.onClickingPintRemove({name: keg.name, brand: keg.brand, price: keg.price, alcoholContent: keg.alcoholContent, pintsRemaining: keg.pintsRemaining - 1 , id: keg.id})
     }
   }
 
