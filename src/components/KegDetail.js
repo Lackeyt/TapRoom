@@ -5,9 +5,7 @@ function KegDetail(props){
   const {keg, onClickingDelete} = props;
 
   function handlePintRemove(){
-    if(keg.pintsRemaining > 0){
-      props.onClickingPintRemove(keg.pintsRemaining--)
-    } 
+    props.onClickingPintRemove(keg)
   }
 
   return(

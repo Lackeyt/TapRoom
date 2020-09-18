@@ -47,9 +47,14 @@ class KegControl extends React.Component {
     });
   }
 
-  handlePintRemove = () => {
-    this.forceUpdate();
-  }
+  handlePintRemove = (kegToEdit) => {
+    const editedMasterKegList = this.state.masterKegList
+      .filter(keg=>keg.id !== this.state.selectedKeg.id)
+      .concat(kegToEdit);
+    this.setState({
+      masterKegList: editedMasterKegList,
+      selectedKeg: null
+    });
 
   render(){
     let currentlyVisibleState = null;
