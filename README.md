@@ -23,6 +23,7 @@ This react app is built based on the following diagram. Users are able to add ne
 2. Navigate into the "TapRoom" directory in Visual Studio Code or preferred text editor:
 3. Open the project by typing "code ." while in the previous directory in your terminal.
 4. Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
+5. Type "npm install" in your console to install necessary dependencies and allow use of the following scripts.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
